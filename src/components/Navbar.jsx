@@ -16,6 +16,7 @@ const Navbar = () => {
     const audioElementRef = useRef(null);
 
     const { y: currentScrollY } = useWindowScroll();
+    // tracking scroll position to determine navbar visibility
     useEffect(() => {
         if (currentScrollY === 0) {
             setIsNavbarVisible(true);
@@ -30,6 +31,7 @@ const Navbar = () => {
         setLastScrollY(currentScrollY);
     }, [currentScrollY, lastScrollY]);
 
+    // GSAP animation for navbar visibility
     useEffect(() => {
         gsap.to(navContainerRef.current, {
             y: isNavbarVisible ? 0 : -100,

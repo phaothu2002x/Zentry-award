@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './components/hero';
 import About from './components/About';
 import Navbar from './components/Navbar';
+import Feature from './components/Feature';
 
 const App = () => {
     return (
@@ -9,7 +10,7 @@ const App = () => {
             <Navbar />
             <Hero />
             <About />
-            <section className="min-h-screen z-0 bg-blue-500" />
+            <Feature />
         </main>
     );
 };
