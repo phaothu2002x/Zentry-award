@@ -13,7 +13,7 @@ const Hero = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [loadedVideo, setLoadedVideo] = useState(0);
 
-    const totalVideos = 3; // Assuming there are 3 videos
+    const totalVideos = 4; // Assuming there are 3 videos
     const nextVideoRef = useRef(null);
 
     const handleVideoLoaded = () => {
@@ -78,7 +78,7 @@ const Hero = () => {
     const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
     return (
         <div className="relative h-dvh w-screen overflow-x-hidden">
-            {/* {isLoading && (
+            {isLoading && (
                 <div className="z-[100] absolute flex-center h-dvh w-screen overflow-hidden bg-blue-50">
                     <div className="three-body">
                         <div className="three-body__dot"></div>
@@ -86,7 +86,7 @@ const Hero = () => {
                         <div className="three-body__dot"></div>
                     </div>
                 </div>
-            )} */}
+            )}
 
             <div
                 id="video-frame"
