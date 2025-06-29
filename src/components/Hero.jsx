@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+    //
     const [currentIndex, setCurrentIndex] = useState(1);
     const [isClicked, SetIsClicked] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
